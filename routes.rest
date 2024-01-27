@@ -34,7 +34,8 @@ DELETE http://localhost:3000/movies/65b2d84ffcfd43ef693a1ba8 HTTP/1.1
 // PRODUCTION Deploy
 ### Get all moviess
 
-GET http://localhost:3000/movies
+GET https://w03-individual-project.onrender.com/api-docs/
+# http://localhost:3000/movies
 
 
 ### Get movies by id
