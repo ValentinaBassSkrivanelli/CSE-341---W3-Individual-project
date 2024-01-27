@@ -3,11 +3,12 @@ const swaggerAutogen = require('swagger-autogen')();
 const doc = {
   info: {
     title: 'My API',
-    description: 'Temple API'
+    description: 'Movies API'
   },
     // host: 'localhost:8080',
-  host: 'cse341-instructor.herokuapp.com',
-  schemes: ['https']
+  host: 'localhost:3000',
+    // 'cse341-instructor.herokuapp.com',
+  schemes: ['https', 'http']
 };
 
 const outputFile = './swagger.json';

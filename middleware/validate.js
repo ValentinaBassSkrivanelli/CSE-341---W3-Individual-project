@@ -2,11 +2,10 @@ const validator = require('../helpers/validate');
 
 const saveContact = (req, res, next) => {
   const validationRule = {
-    firstName: 'required|string',
-    lastName: 'required|string',
-    email: 'required|email',
-    favoriteColor: 'required|string',
-    birthday: 'string'
+    nombre: 'required|string',
+    director: 'required|string',
+    clasificacion: 'required|string',
+  
   };
   validator(req.body, validationRule, {}, (err, status) => {
     if (!status) {

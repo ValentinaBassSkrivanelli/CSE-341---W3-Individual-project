@@ -29,32 +29,29 @@ const getSingle = async (req, res) => {
 
 const createContact = async (req, res) => {
   const movies = {
-    firstName: req.body.firstName,
-    lastName: req.body.lastName,
-    email: req.body.email,
-    favoriteColor: req.body.favoriteColor,
-    birthday: req.body.birthday
+    nombre: req.body.nombre,
+    director: req.body.director,
+    clasificacion: req.body.clasificacion
   };
   const response = await mongodb.getDb().db().collection('movies').insertOne(movies);
   if (response.acknowledged) {
     res.status(201).json(response);
   } else {
-    res.status(500).json(response.error || 'Some error occurred while creating the contact.');
+    res.status(500).json(response.error || 'Some error occurred while creating the movie.');
   }
 };
 
 const updateContact = async (req, res) => {
    if (!ObjectId.isValid(req.params.id)) {
-    res.status(400).json('Must use a valid contact id to update a contact.');
+    res.status(400).json('Must use a valid contact id to update a movie.');
   }
   const userId = new ObjectId(req.params.id);
   // be aware of updateOne if you only want to update specific fields
   const movies = {
-    firstName: req.body.firstName,
-    lastName: req.body.lastName,
-    email: req.body.email,
-    favoriteColor: req.body.favoriteColor,
-    birthday: req.body.birthday
+    nombre: req.body.nombre,
+    director: req.body.director,
+    clasificacion: req.body.clasificacion
+  
   };
   const response = await mongodb
     .getDb()
@@ -65,13 +62,13 @@ const updateContact = async (req, res) => {
   if (response.modifiedCount > 0) {
     res.status(204).send();
   } else {
-    res.status(500).json(response.error || 'Some error occurred while updating the contact.');
+    res.status(500).json(response.error || 'Some error occurred while updating the movie.');
   }
 };
 
 const deleteContact = async (req, res) => {
   if (!ObjectId.isValid(req.params.id)) {
-    res.status(400).json('Must use a valid contact id to delete a contact.');
+    res.status(400).json('Must use a valid contact id to delete a movie.');
   }
   const userId = new ObjectId(req.params.id);
   const response = await mongodb.getDb().db().collection('movies').remove({ _id: userId }, true);

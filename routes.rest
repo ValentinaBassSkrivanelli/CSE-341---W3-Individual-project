@@ -1,73 +1,66 @@
 // LOCALHOST
 ### Get all moviess
-GET http://localhost:3000/moviess
+GET http://localhost:3000/movies
 
 
 ### Get movies by id
-GET http://localhost:3000/moviess/65b2d7ebfcfd43ef693a1ba2
+GET http://localhost:3000/movies/65b2d7ebfcfd43ef693a1ba2
 
 
 ### Create movies
-POST http://localhost:3000/moviess HTTP/1.1
+POST http://localhost:3000/movies HTTP/1.1
 content-type: application/json
 
 {
-    "firstName":"Ashley",
-    "lastName":"Weaver",
-    "email":"aWeaver@test.com",
-    "favoriteColor":"Brown",
-    "birthday":"06/19/2000"
+    "nombre":"El sexto sentido",
+    "director":"M. Night Shyamala",
+    "clasificacion":"Drama",
+   
 }
 
 
 ### PUT movies
-PUT http://localhost:3000/moviess/65b2d7fdfcfd43ef693a1ba4 HTTP/1.1
+PUT http://localhost:3000/movies/65b2d7fdfcfd43ef693a1ba4 HTTP/1.1
 content-type: application/json
 
 {
-    "firstName":"Sarah",
-    "lastName":"Birch",
-    "email":"test@gmail.com",
-    "favoriteColor":"Green",
-    "birthday":"12/12/20"
+    "nombre":"Todo Sobre Mi Madre",
+    "director":"Almodobar",
+    "clasificacion":"Drama",
 }
 ### DELETE movies
-DELETE http://localhost:3000/moviess/65b2d8b3fcfd43ef693a1bae HTTP/1.1
+DELETE http://localhost:3000/movies/65b2d84ffcfd43ef693a1ba8 HTTP/1.1
 
 // PRODUCTION Deploy
 ### Get all moviess
-GET https://cse341-instructor.herokuapp.com/moviess
+
+GET http://localhost:3000/movies
 
 
 ### Get movies by id
-GET https://cse341-instructor.herokuapp.com/moviess/622023f642f9ab4cd6e060b3
+GET http://localhost:3000/movies/65b2d7ebfcfd43ef693a1ba2
 
 
 ### Create movies
-POST https://cse341-instructor.herokuapp.com/moviess HTTP/1.1
+POST http://localhost:3000/movies HTTP/1.1
 content-type: application/json
 
 {
-    "firstName":"Ashley",
-    "lastName":"Weaver",
-    "email":"aWeaver@test.com",
-    "favoriteColor":"Brown",
-    "birthday":"06/19/2000"
+    "nombre":"El sexto sentido",
+    "director":"M. Night Shyamala",
+    "clasificacion":"Drama",
+   
 }
 
 
 ### PUT movies
-PUT https://cse341-instructor.herokuapp.com/moviess/6220bcb39cd507e920c75a0b HTTP/1.1
+PUT http://localhost:3000/movies/65b2d7fdfcfd43ef693a1ba4 HTTP/1.1
 content-type: application/json
 
 {
-    "firstName":"Sarah",
-    "lastName":"Birch",
-    "email":"sarahB@gmail.com",
-    "favoriteColor":"Yellow",
-    "birthday":"06/12/20"
+    "nombre":"Todo Sobre Mi Madre",
+    "director":"Almodobar",
+    "clasificacion":"Drama",
 }
-
-
 ### DELETE movies
-DELETE https://cse341-instructor.herokuapp.com/moviess/6220e34083149913680f9a64 HTTP/1.1
+DELETE http://localhost:3000/movies/65b2d84ffcfd43ef693a1ba8 HTTP/1.1
