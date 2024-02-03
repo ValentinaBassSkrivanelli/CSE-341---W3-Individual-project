@@ -50,9 +50,9 @@ passport.use(new GitHubStrategy({
 ));
 
 passport.serializeUser((user, done) => {
-  return done(null, user);
+   done(null, user);
 });
-passport.deserializeUser((uses, done) => {
+passport.deserializeUser((user, done) => {
   done(null, user);
 });
 
