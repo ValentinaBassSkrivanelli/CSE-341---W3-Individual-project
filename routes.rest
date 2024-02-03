@@ -14,8 +14,7 @@ content-type: application/json
 {
     "nombre":"El sexto sentido",
     "director":"M. Night Shyamala",
-    "clasificacion":"Drama",
-   
+    "clasificacion":"Drama"   
 }
 
 
@@ -26,16 +25,16 @@ content-type: application/json
 {
     "nombre":"Todo Sobre Mi Madre",
     "director":"Almodobar",
-    "clasificacion":"Drama",
+    "clasificacion":"Drama"
 }
+
 ### DELETE movies
 DELETE http://localhost:3000/movies/65b2d84ffcfd43ef693a1ba8 HTTP/1.1
 
 // PRODUCTION Deploy
 ### Get all moviess
 
-GET https://w03-individual-project.onrender.com/api-docs/
-# http://localhost:3000/movies
+GET http://localhost:3000/movies
 
 
 ### Get movies by id
@@ -61,7 +60,7 @@ content-type: application/json
 {
     "nombre":"Todo Sobre Mi Madre",
     "director":"Almodobar",
-    "clasificacion":"Drama",
+    "clasificacion":"Drama"
 }
 ### DELETE movies
 DELETE http://localhost:3000/movies/65b2d84ffcfd43ef693a1ba8 HTTP/1.1
