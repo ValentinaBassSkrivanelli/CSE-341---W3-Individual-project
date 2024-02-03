@@ -63,7 +63,7 @@ app.get('/github/callback', passport.authenticate('github', {
 }),
   (req, res) => {
     req.session.user = req.user;
-    req.redirect('/');
+    res.redirect('/');
   });
   
 //ERROR
