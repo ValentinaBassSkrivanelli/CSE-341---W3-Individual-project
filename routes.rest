@@ -1,14 +1,14 @@
 // LOCALHOST
 ### Get all moviess
-GET http://localhost:3000/movies
+GET https://w03-individual-project.onrender.com/movies
 
 
 ### Get movies by id
-GET http://localhost:3000/movies/65b2d7ebfcfd43ef693a1ba2
+GET https://w03-individual-project.onrender.com/movies/65b2d7ebfcfd43ef693a1ba2
 
 
 ### Create movies
-POST http://localhost:3000/movies HTTP/1.1
+POST https://w03-individual-project.onrender.com/movies HTTP/1.1
 content-type: application/json
 
 {
@@ -19,7 +19,7 @@ content-type: application/json
 
 
 ### PUT movies
-PUT http://localhost:3000/movies/65b2d7fdfcfd43ef693a1ba4 HTTP/1.1
+PUT https://w03-individual-project.onrender.com/movies/65b2d7fdfcfd43ef693a1ba4 HTTP/1.1
 content-type: application/json
 
 {
@@ -29,20 +29,20 @@ content-type: application/json
 }
 
 ### DELETE movies
-DELETE http://localhost:3000/movies/65b2d84ffcfd43ef693a1ba8 HTTP/1.1
+DELETE https://w03-individual-project.onrender.com/movies/65b2d84ffcfd43ef693a1ba8 HTTP/1.1
 
 // PRODUCTION Deploy
 ### Get all moviess
 
-GET http://localhost:3000/movies
+GET https://w03-individual-project.onrender.com/movies
 
 
 ### Get movies by id
-GET http://localhost:3000/movies/65b2d7ebfcfd43ef693a1ba2
+GET https://w03-individual-project.onrender.com/movies/65b2d7ebfcfd43ef693a1ba2
 
 
 ### Create movies
-POST http://localhost:3000/movies HTTP/1.1
+POST https://w03-individual-project.onrender.com/movies HTTP/1.1
 content-type: application/json
 
 {
@@ -54,7 +54,7 @@ content-type: application/json
 
 
 ### PUT movies
-PUT http://localhost:3000/movies/65b2d7fdfcfd43ef693a1ba4 HTTP/1.1
+PUT https://w03-individual-project.onrender.com/movies/65b2d7fdfcfd43ef693a1ba4 HTTP/1.1
 content-type: application/json
 
 {
@@ -63,4 +63,4 @@ content-type: application/json
     "clasificacion":"Drama"
 }
 ### DELETE movies
-DELETE http://localhost:3000/movies/65b2d84ffcfd43ef693a1ba8 HTTP/1.1
+DELETE https://w03-individual-project.onrender.com/movies/65b2d84ffcfd43ef693a1ba8 HTTP/1.1
