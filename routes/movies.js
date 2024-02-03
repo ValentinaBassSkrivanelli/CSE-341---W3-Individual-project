@@ -13,7 +13,7 @@ router.post('/', contactsController.createContact);
 
 // router.post('/', validation.saveContact, contactsController.createContact);
 
-router.put("/:id", isAuthenticated, contactsController.putInstructor);
+router.put("/:id", isAuthenticated, contactsController.updateContact);
 // router.put('/:id', validation.saveContact, contactsController.updateContact);
 
 

@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongodb = require('./db/connect');
 const passport = require('passport');
-const session = require('express.session');
+const session = require('express-session');
 const GitHubStrategy = require('passport-github2').Strategy;
 const cors = require('cors');
 
@@ -35,7 +35,7 @@ app
   })
   .use(cors({ methods: ['GET', 'POST', 'DELETE', 'UPDATE', 'PUT', 'PATCH'] }))
   .use(cors({ origin: '*' }))
-  .use("/", required("./routes/index.js"));
+  .use("/", require("./routes/index.js"));
 
   // .use('/', require('./routes'));
 
@@ -56,7 +56,7 @@ passport.deserializeUser((uses, done) => {
   done(null, user);
 });
 
-app.get('/', (req, res) => { res.send(req.session.user !== undefined ? 'Logged in as ${req.session.user.displayName}' : "Logegd Out") });
+app.get('/', (req, res) => { res.send(req.session.user !== undefined ? 'Logged in as ${req.session.user.displayName}' : "Logged Out") });
 
 app.get('/github/callback', passport.authenticate('github', {
   failureRedirect: '/api-docs', session: false
